@@ -312,3 +312,81 @@ docker run --name cloud-devops-ci-cd-lab cloud-devops-ci-cd-lab:1.0
 ## Result
 
 The updated Docker image was successfully validated, confirming that application changes were incorporated into the container image.
+
+---
+
+# Step 13 – Commit Docker Feature
+
+## Objective
+
+Record the completed Docker implementation in the project history.
+
+## Commands Executed
+
+```bash
+git status
+git add .
+git status
+git commit -m "feat: add Docker support"
+```
+
+## Implementation
+
+- Reviewed the working tree.
+- Staged the Docker-related project changes.
+- Created a feature commit using the Conventional Commits specification.
+
+## Result
+
+The Docker implementation has been committed to the `feature/docker-support` branch and is ready to be shared for review.
+
+---
+
+# Step 14 – Publish the Feature Branch
+
+## Objective
+
+Publish the feature branch to GitHub for collaboration and code review.
+
+## Commands Executed
+
+```bash
+git branch
+git push -u origin feature/docker-support
+```
+
+## Implementation
+
+- Confirmed the active working branch.
+- Published the `feature/docker-support` branch to GitHub.
+- Configured upstream tracking for the feature branch.
+
+## Result
+
+The feature branch is now available on GitHub and ready for a Pull Request.
+
+---
+
+# Step 15 – Configure the CI Workflow
+
+## Objective
+
+Create a GitHub Actions workflow to automatically validate the project during development.
+
+## Workflow Triggers
+
+- Push to `main`
+- Push to `feature/*`
+- Pull Requests targeting `main`
+
+## Validation Steps
+
+- Check out the repository.
+- Configure the Python runtime.
+- Verify the Python installation.
+- Validate the application syntax.
+- Build the Docker image.
+
+## Result
+
+The repository now contains a Continuous Integration (CI) workflow that automatically validates code changes before they are merged into the main branch.
