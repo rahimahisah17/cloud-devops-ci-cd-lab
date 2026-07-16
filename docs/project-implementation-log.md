@@ -390,3 +390,48 @@ Create a GitHub Actions workflow to automatically validate the project during de
 ## Result
 
 The repository now contains a Continuous Integration (CI) workflow that automatically validates code changes before they are merged into the main branch.
+
+---
+
+# Step 16 – Commit the CI Workflow
+
+## Objective
+
+Add the GitHub Actions workflow to the feature branch and publish the changes.
+
+## Commands Executed
+
+```bash
+git status
+git add .
+git commit -m "ci: add GitHub Actions workflow"
+git push
+```
+
+## Implementation
+
+- Staged the CI workflow configuration.
+- Committed the workflow using the Conventional Commits specification.
+- Updated the existing feature branch on GitHub.
+
+## Result
+
+The Pull Request now includes the GitHub Actions workflow and is ready for automated validation.
+
+---
+
+# Step 17 – Validate the CI Pipeline
+
+## Objective
+
+Verify that the GitHub Actions workflow executes successfully following changes to the feature branch.
+
+## Implementation
+
+- Triggered the CI workflow by pushing changes to the feature branch.
+- Verified successful execution of the GitHub Actions workflow.
+- Confirmed that the repository validation steps completed without errors.
+
+## Result
+
+The Continuous Integration pipeline successfully validated the project, providing automated verification for future code changes and pull requests.
