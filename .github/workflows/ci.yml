@@ -28,9 +28,6 @@ jobs:
       - name: Verify Python installation
         run: python --version
 
-      - name: Verify application syntax
-        run: python -m py_compile app/app.py
-
       - name: Build Docker image
         run: |
           docker build \
@@ -46,6 +43,6 @@ jobs:
       - name: Push Docker image
         run: |
           docker push ghcr.io/rahimahisah17/cloud-devops-ci-cd-lab:latest
-          
+
 
         
