@@ -8,6 +8,9 @@ on:
   pull_request:
     branches:
       - main
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   validate:
@@ -25,8 +28,21 @@ jobs:
       - name: Verify Python installation
         run: python --version
 
-      - name: Verify application syntax
-        run: python -m py_compile app/app.py
-
       - name: Build Docker image
-        run: docker build -t cloud-devops-ci-cd-lab:ci .
+        run: |
+          docker build \
+            -t ghcr.io/rahimahisah17/cloud-devops-ci-cd-lab:latest \
+            .
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push Docker image
+        run: |
+          docker push ghcr.io/rahimahisah17/cloud-devops-ci-cd-lab:latest
+
+
+        
