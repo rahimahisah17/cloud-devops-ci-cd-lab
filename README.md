@@ -8,6 +8,20 @@ This project simulates a collaborative software delivery workflow commonly used 
 
 The project emphasizes Git best practices, automation, Docker-based application delivery, and GitHub Actions workflows.
 
+## Project Preview
+
+### Local Application
+
+![Local Application](docs/screenshots/34-local-web-application.png)
+
+### GitHub Actions Pipeline
+
+![GitHub Actions](docs/screenshots/37-successful-github-actions-workflow.png)
+
+### Final Project Structure
+
+![Project Structure](docs/screenshots/38-final-project-structure.png)
+
 ## Technologies Used
 
 - Git
