@@ -10,20 +10,6 @@ This document records the implementation of the **Cloud DevOps CI/CD Lab** proje
 
 Establish the initial project structure for the Cloud DevOps CI/CD Lab and prepare the repository for version control and incremental development.
 
-## Repository Structure
-
-```text
-cloud-devops-ci-cd-lab/
-├── app/
-│   └── app.py
-├── docs/
-│   ├── screenshots/
-│   │   └── 01-project-structure.png
-│   └── project-notes.md
-├── .gitignore
-└── README.md
-```
-
 ## Implementation
 
 - Created the project directory.
@@ -39,8 +25,6 @@ cloud-devops-ci-cd-lab/
 ## Result
 
 The project structure has been established and is ready to be placed under Git version control.
-
----
 
 # Step 2 – Git Repository Initialization
 
