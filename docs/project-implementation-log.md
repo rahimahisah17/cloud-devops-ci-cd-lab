@@ -10,6 +10,20 @@ This document records the implementation of the **Cloud DevOps CI/CD Lab** proje
 
 Establish the initial project structure for the Cloud DevOps CI/CD Lab and prepare the repository for version control and incremental development.
 
+## Repository Structure
+
+```text
+cloud-devops-ci-cd-lab/
+├── app/
+│   └── app.py
+├── docs/
+│   ├── screenshots/
+│   │   └── 01-project-structure.png
+│   └── project-notes.md
+├── .gitignore
+└── README.md
+```
+
 ## Implementation
 
 - Created the project directory.
@@ -18,7 +32,7 @@ Establish the initial project structure for the Cloud DevOps CI/CD Lab and prepa
 - Added the project README.
 - Created the application directory and initial application file.
 - Created the documentation directory.
-- Created the project implementation log.
+- Created the project-notes (was later changed to project implementation log).
 - Created a dedicated directory for project screenshots.
 - Captured the initial project structure.
 
