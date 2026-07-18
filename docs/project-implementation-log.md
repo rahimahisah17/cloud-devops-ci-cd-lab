@@ -687,7 +687,7 @@ tree -L 2
 ## Result
 
 The repository structure is organized, consistent, and ready for publication.
-```
+
 ---
 
 # Step 29 – Extend the CI Pipeline for Continuous Delivery
