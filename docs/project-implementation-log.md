@@ -124,15 +124,16 @@ The project is now hosted on GitHub and ready for collaborative development and 
 
 ---
 
-# Step 5 – Publish the Repository to GitHub
+# Step 5 – Connecting the Local Repository to GitHub
 
 ## Objective
 
-Publish the local Git repository to GitHub and establish the remote as the central source of truth for the project.
+Connect the local Git repository to GitHub and publish the project.
 
 ## Commands Executed
 
 ```bash
+git remote -v
 git remote add origin https://github.com/rahimahisah17/cloud-devops-ci-cd-lab.git
 git remote -v
 git push -u origin main
@@ -140,14 +141,15 @@ git push -u origin main
 
 ## Implementation
 
-- Connected the local repository to GitHub using the `origin` remote.
-- Verified the remote configuration.
-- Published the initial project to GitHub.
-- Configured the local `main` branch to track the remote `main` branch.
+- Verified that no remote repositories were configured.
+- Added GitHub as the primary remote named `origin`.
+- Confirmed the remote configuration.
+- Published the local repository to GitHub.
+- Established upstream tracking for the `main` branch.
 
 ## Result
 
-The project is now hosted on GitHub and ready for collaborative development and CI/CD automation.
+The project is now available on GitHub, providing a centralized repository for collaboration, version control, and CI/CD automation.
 
 ---
 
