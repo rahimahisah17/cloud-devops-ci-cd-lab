@@ -33,6 +33,22 @@ The project emphasizes Git best practices, automation, Docker-based application 
 - Visual Studio Code
 - Markdown
 
+## Skills Demonstrated
+
+This project demonstrates practical experience with:
+
+- Git version control
+- GitHub collaboration and Pull Requests
+- Feature branch workflow
+- Docker containerization
+- GitHub Actions
+- Continuous Integration (CI)
+- Continuous Delivery (CD)
+- GitHub Container Registry (GHCR)
+- Linux command-line operations
+- Nginx web server deployment
+- Technical documentation and troubleshooting
+
 ## Project Structure
 
 ```text
@@ -78,6 +94,20 @@ Build Docker Image
       │
       ▼
 Publish Docker Image (GHCR)
+```
+
+## CI/CD Architecture
+
+```mermaid
+flowchart LR
+    A[Developer] --> B[GitHub Repository]
+    B --> C[Feature Branch]
+    C --> D[Pull Request]
+    D --> E[GitHub Actions]
+    E --> F[Build Docker Image]
+    E --> G[Run CI Pipeline]
+    G --> H[Publish Image to GHCR]
+    H --> I[Deployable Container Image]
 ```
 
 ## Key Features
