@@ -652,17 +652,45 @@ The current CI workflow was reviewed and prepared for enhancement into a Continu
 
 ## Objective
 
-Validate the successful execution of the GitHub Actions Continuous Integration pipeline.
+Validate that the GitHub Actions workflow successfully performs Continuous Integration after migrating the application from Python to an Nginx-based static website.
 
 ## Implementation
 
-- Triggered the workflow through a Git commit and push.
-- Monitored the workflow execution in the GitHub Actions dashboard.
-- Verified that all workflow stages completed successfully.
+The latest changes were pushed to GitHub, automatically triggering the GitHub Actions workflow.
+
+During the initial execution, the workflow failed because it was still attempting to validate a Python application that had already been removed from the project.
+
+After reviewing the workflow logs, the root cause was identified as an obsolete **Verify application syntax** step that no longer reflected the current application architecture.
+
+The outdated validation step was removed from the workflow, the changes were committed and pushed, and the pipeline was executed again.
+
+## Screenshots
+
+### Initial Pipeline Failure
+
+![GitHub Actions workflow showing the initial Continuous Integration pipeline failure.](screenshots/27-ci-pipeline-failed.png)
+
+*Figure 27.1 – The GitHub Actions workflow failed during validation after the application was migrated from Python to an Nginx-based static website.*
+
+---
+
+### Root Cause Investigation
+
+![GitHub Actions logs identifying the obsolete Python validation step.](screenshots/27-root-cause-analysis.png)
+
+*Figure 27.2 – Investigation of the workflow logs identified that the pipeline was still attempting to validate a Python application that no longer existed.*
+
+---
+
+### Successful Pipeline Verification
+
+![GitHub Actions workflow showing all checks passing after the workflow was updated.](screenshots/27-ci-pipeline-success.png)
+
+*Figure 27.3 – After updating the workflow configuration, the Continuous Integration pipeline completed successfully.*
 
 ## Result
 
-The Continuous Integration pipeline completed successfully, confirming that the automated build process is functioning as expected.
+The GitHub Actions workflow was successfully updated to reflect the new Nginx-based application. The corrected pipeline now validates the repository and executes successfully, providing a reliable Continuous Integration process before extending the workflow to Continuous Delivery.
 
 ---
 
